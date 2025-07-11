@@ -19,12 +19,10 @@ public class Zoo {
         this.people.add(person);
     }
 
-    // This method needs to be public to be called from other modules
     public void addVisitorWithTicket(Visitor visitor) {
         this.visitorsWithTickets.add(visitor);
     }
 
-    // This method needs to be public to be called from other modules
     public boolean isTicketCodeValid(String code) {
         return visitorsWithTickets.stream().anyMatch(v -> v.getTicketCode().equalsIgnoreCase(code));
     }
@@ -39,12 +37,10 @@ public class Zoo {
 
     public static void main(String[] args) {
 
-        // You can add more functionality here to test the Zoo class
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Zoo Simulation!");
 
         boolean exit = false;
-        // This loop runs the main menu until the user chooses to exit.
         while (!exit) {
             System.out.println("\n--- Main Menu ---");
             System.out.println("1. Administrator Console");
