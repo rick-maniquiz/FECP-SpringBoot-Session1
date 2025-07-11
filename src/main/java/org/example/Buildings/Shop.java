@@ -1,7 +1,7 @@
 package org.example.Buildings;
 
 import java.util.ArrayList;
-import java.util.Lists;
+import java.util.List;
 import java.util.Scanner;
 
 import org.example.Buildings.Shops.Item;
@@ -20,9 +20,9 @@ public abstract class Shop {
 
     public void startShop(){
         clearCart();
-        boolean continue = true;
+        boolean willContinue = true;
 
-        while (continue){
+        while (willContinue){
             showItems();
             System.out.println("Enter item number to add to cart (0 to proceed to checkout):");
             int menuChoice = scanner.nextInt();
@@ -41,7 +41,7 @@ public abstract class Shop {
         System.out.println("---Available Items---");
         for (int i=0; i<itemList.size(); i++) {
             Item item = itemList.get(i);
-            System.out.println("-",i+1, item.getItem(), item.getPrice());
+            System.out.println();
         }
     }
 
