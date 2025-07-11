@@ -12,7 +12,7 @@ public class Zoo {
     ArrayList<Building> buildings;
     private final ArrayList<Person> people = new ArrayList<>();
     ArrayList<Animal> animals;
-    public boolean isZooOpen = true;
+    private boolean isZooOpen;
 
 
     public void addPerson(Person person) {
@@ -34,6 +34,7 @@ public class Zoo {
     public boolean isZooOpen() {
         return isZooOpen;
     }
+
 
     public static void main(String[] args) {
 
