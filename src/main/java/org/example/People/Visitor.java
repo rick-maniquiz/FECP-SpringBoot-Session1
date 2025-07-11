@@ -33,8 +33,5 @@ public class Visitor extends Person {
             this.ticketType = "Senior";
             this.ticketPrice = 50.00;
         }
-    } private String generateTicketCode(){
-        Random rand =  new Random();
-
     }
 }
