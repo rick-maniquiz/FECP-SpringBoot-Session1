@@ -1,4 +1,4 @@
-package org.example.Buildings.Shop;
+package org.example.Building.Shop;
 
 
 //helper class for pre-stored items per shop subclass

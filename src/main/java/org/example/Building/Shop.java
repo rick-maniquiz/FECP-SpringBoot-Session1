@@ -1,13 +1,12 @@
-package org.example.Buildings;
+package org.example.Building;
 
 import java.util.ArrayList;
 import java.util.Lists;
 import java.util.Scanner;
-import java.util.Collections;
 
-import org.example.Buildings.Shop.Item;
+import org.example.Building.Shop.Item;
 
-public abstract class Shop extends Buildings {
+public abstract class Shop {
 
     private List<Item> itemList = new ArrayList<>();
     private List<Item> cart = new ArrayList<>();
