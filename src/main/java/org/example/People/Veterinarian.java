@@ -6,9 +6,9 @@ import org.example.Person;
 
 public class Veterinarian extends Person {
 
-    public Veterinarian(String name) {
+    public Veterinarian(String name, Hospital hospital) {
         super(name);
-        this.location = new Hospital();
+        this.location = hospital;
     }
 
 }
