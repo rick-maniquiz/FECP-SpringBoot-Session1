@@ -10,11 +10,10 @@ import java.util.Scanner;
 public class Ticketing {
 
     private final Scanner scanner;
-    private final Zoo zoo;
+    private final Zoo zoo = new Zoo();
 
     public Ticketing(Scanner scanner) {
         this.scanner = scanner;
-        this.zoo = Zoo.getInstance();
     }
 
     public void start(){

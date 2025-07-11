@@ -8,19 +8,12 @@ import java.util.Scanner;
 import org.example.Ticketing;
 
 public class Zoo {
-    private static Zoo instance;
     private final List<Visitor> visitorsWithTickets = new ArrayList<>();
     ArrayList<Building> buildings;
     ArrayList<Person> persons;
     ArrayList<Animal> animals;
     public boolean isZooOpen = true;
 
-    public static synchronized Zoo getInstance() {
-        if (instance == null) {
-            instance = new Zoo();
-        }
-        return instance;
-    }
 
     // This method needs to be public to be called from other modules
     public void addVisitorWithTicket(Visitor visitor) {
