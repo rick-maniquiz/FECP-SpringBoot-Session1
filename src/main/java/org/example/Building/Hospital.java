@@ -1,4 +1,4 @@
-package org.example.Buildings;
+package org.example.Building;
 
 //import Zoo.Animals.animal;
 //import Zoo.People.Veterinarian;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 //import java.time.LocalDateTime;
 import java.util.HashMap;
 
-public class Hospital extends Buildings{
+public class Hospital {
 
     private ArrayList<animal> sickAnimals = new ArrayList<>();
     //map so timestamps can be generated and accessible per animal

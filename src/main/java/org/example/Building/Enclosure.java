@@ -1,4 +1,4 @@
-package org.example.Buildings;
+package org.example.Building;
 
 import java.util.ArrayList;
 import java.util.List;
