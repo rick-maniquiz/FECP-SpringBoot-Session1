@@ -9,7 +9,7 @@ public abstract class Animal {
         this.isHealthy = isHealthy;
     }
 
-    protected void eat(){
+    public void eat(){
         System.out.println("The " + this.type + " is eating!");
         this.makeSound();
     }
@@ -20,7 +20,7 @@ public abstract class Animal {
 
     }
 
-    protected void roam(){
+    public void roam(){
 
     }
 

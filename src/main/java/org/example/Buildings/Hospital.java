@@ -1,5 +1,6 @@
 package org.example.Buildings;
 
+import org.example.Animal;
 import org.example.Building;
 
 import java.time.format.DateTimeFormatter;
@@ -7,6 +8,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Hospital extends Building {
+    public ArrayList<Animal> admittedAnimals;
+
+    public void admitAnimal(Animal animal){
+        admittedAnimals.add(animal);
+    }
 //    private ArrayList<animal> sickAnimals = new ArrayList<>();
 //    //map so timestamps can be generated and accessible per animal
 //    private Map<animal, LocalDateTime> healedAnimals = new HashMap<>();

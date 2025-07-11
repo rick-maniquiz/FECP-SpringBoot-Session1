@@ -10,7 +10,7 @@ public abstract class Feline extends Animal {
     }
 
     @Override
-    protected void roam(){
+    public void roam(){
         System.out.println("The " + this.specie + " dashes! Zooming through the field.");
     }
 
