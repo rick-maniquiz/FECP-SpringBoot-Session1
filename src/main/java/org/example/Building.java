@@ -1,7 +1,11 @@
 package org.example;
 
-public abstract class Building{
+public class Building {
     protected String address;
+
+    public Building(){
+        this.address = "Unknown";
+    }
 
     public Building(String address){
         this.address = address;

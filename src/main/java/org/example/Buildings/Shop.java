@@ -1,10 +1,10 @@
-package org.example.Building;
+package org.example.Buildings;
 
 import java.util.ArrayList;
 import java.util.Lists;
 import java.util.Scanner;
 
-import org.example.Building.Shop.Item;
+import org.example.Buildings.Shops.Item;
 
 public abstract class Shop {
 

@@ -1,6 +1,7 @@
 package org.example.Species;
 
 import org.example.Animal;
+import org.example.Building;
 
 public abstract class Bird extends Animal {
     protected Bird(String name, boolean isHealthy, Building location) {
