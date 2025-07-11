@@ -1,8 +1,8 @@
-package org.example.Buildings.Enclosure;
+package org.example.Buildings.Enclosures;
 
 import org.example.Buildings.Enclosure;
 
-public class BirdEnclosure extends Enclosure {
+public class FelineEnclosure extends Enclosure {
 
     @Override
     public void feed(){

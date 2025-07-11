@@ -1,5 +1,6 @@
 package org.example.People;
 
+import org.example.Building;
 import org.example.Person;
 
 public class Handler extends Person {

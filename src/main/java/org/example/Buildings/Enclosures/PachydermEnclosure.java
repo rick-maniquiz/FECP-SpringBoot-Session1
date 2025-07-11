@@ -1,4 +1,4 @@
-package org.example.Buildings.Enclosure;
+package org.example.Buildings.Enclosures;
 
 import org.example.Buildings.Enclosure;
 
