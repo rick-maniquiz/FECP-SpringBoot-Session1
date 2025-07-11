@@ -9,7 +9,7 @@ public abstract class Pachyderm extends Animal {
     }
 
     @Override
-    protected void roam(){
+    public void roam(){
         System.out.println("The " + this.specie + " runs! Stomping through the ground.");
     }
 

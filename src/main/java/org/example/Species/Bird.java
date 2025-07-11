@@ -9,7 +9,7 @@ public abstract class Bird extends Animal {
         this.specie = "Bird";
     }
     @Override
-    protected void roam(){
+    public void roam(){
         System.out.println("The " + this.specie + " flies! Swooping through the wind.");
     }
 

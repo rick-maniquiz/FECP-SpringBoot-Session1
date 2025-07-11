@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public abstract class Enclosure extends Building {
-    private List<Animal> animals = new ArrayList<>();
+
     public Scanner scanner = new Scanner(System.in);
 
     public void openEnclosure(){
@@ -19,16 +19,6 @@ public abstract class Enclosure extends Building {
 
     }
 
-    public void feed(){
 
-    }
-
-    public void exercise(){
-
-    }
-
-    public void examine(){
-
-    }
 
 }
