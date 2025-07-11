@@ -3,8 +3,8 @@ package org.example.Species.Felines;
 import org.example.Species.Feline;
 
 public class Lion extends Feline {
-    public Lion(String name, boolean isHealthy, Building location) {
-        super(name, isHealthy, location);
+    public Lion(String name, boolean isHealthy) {
+        super(name, isHealthy);
         this.type = "Lion";
     }
 

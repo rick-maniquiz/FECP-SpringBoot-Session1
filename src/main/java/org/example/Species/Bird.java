@@ -4,8 +4,8 @@ import org.example.Animal;
 import org.example.Building;
 
 public abstract class Bird extends Animal {
-    protected Bird(String name, boolean isHealthy, Building location) {
-        super(name, isHealthy, location);
+    protected Bird(String name, boolean isHealthy) {
+        super(name, isHealthy);
         this.specie = "Bird";
     }
     @Override

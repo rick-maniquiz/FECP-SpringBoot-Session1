@@ -4,8 +4,8 @@ import org.example.Species.Feline;
 
 public class Cheetah extends Feline {
 
-    public Cheetah(String name, boolean isHealthy, Building location) {
-        super(name, isHealthy, location);
+    public Cheetah(String name, boolean isHealthy) {
+        super(name, isHealthy);
         this.type = "Cheetah";
     }
 
