@@ -2,7 +2,7 @@ package org.example.Species;
 
 import org.example.Animal;
 
-public class Pachyderm extends Animal {
+public abstract class Pachyderm extends Animal {
     protected Pachyderm(String name, boolean isHealthy, Building location) {
         super(name, isHealthy, location);
         this.specie = "Pachyderm";
