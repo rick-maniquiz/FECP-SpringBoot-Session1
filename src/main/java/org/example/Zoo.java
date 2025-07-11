@@ -8,18 +8,15 @@ import java.util.Scanner;
 import org.example.Ticketing;
 
 public class Zoo {
-    private static Zoo instance;
     private final List<Visitor> visitorsWithTickets = new ArrayList<>();
     ArrayList<Building> buildings;
-    ArrayList<Person> persons;
+    private final ArrayList<Person> people = new ArrayList<>();
     ArrayList<Animal> animals;
     public boolean isZooOpen = true;
 
-    public static synchronized Zoo getInstance() {
-        if (instance == null) {
-            instance = new Zoo();
-        }
-        return instance;
+
+    public void addPerson(Person person) {
+        this.people.add(person);
     }
 
     // This method needs to be public to be called from other modules
@@ -30,6 +27,10 @@ public class Zoo {
     // This method needs to be public to be called from other modules
     public boolean isTicketCodeValid(String code) {
         return visitorsWithTickets.stream().anyMatch(v -> v.getTicketCode().equalsIgnoreCase(code));
+    }
+
+    public void setZooOpen(boolean isOpen) {
+        this.isZooOpen = isOpen;
     }
 
     public boolean isZooOpen() {
@@ -54,9 +55,12 @@ public class Zoo {
             String choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    new Ticketing(scanner).start();
+                    new Admin(scanner).start();
                     break;
                 case "2":
+                    new Ticketing(scanner).start();
+                    break;
+                case "3":
                     exit = true;
                     System.out.println("Thank you for using the Zoo Simulation!");
                     break;
@@ -67,3 +71,5 @@ public class Zoo {
         }
     }
 }
+
+
