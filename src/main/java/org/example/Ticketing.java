@@ -31,28 +31,27 @@ public class Ticketing {
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         System.out.print("Enter your age: ");
-
-        String ageInput = scanner.nextLine();
         int age;
 
-        if (ageInput.matches("\\d+")) {
-            age = Integer.parseInt(ageInput);
+        if (scanner.hasNextInt()) {
+            age = scanner.nextInt();
+            scanner.nextLine();
+            if (age < 0) {
+                System.out.println("Age cannot be negative. Please enter a valid age.");
+                return;
+            }
         } else {
             System.out.println("Invalid age. Please enter a number.");
-            return;
-        }
-        if (age < 0) {
-            System.out.println("Age cannot be negative. Please enter a valid age.");
+            scanner.nextLine();
             return;
         }
 
         Visitor newVisitor = new Visitor(name, age);
-        System.out.println("\nYou qualify for a " + newVisitor.getTicketType().toUpperCase() + " ticket.");
+        System.out.println("\nYou qualify for a/an " + newVisitor.getTicketType().toUpperCase() + " ticket.");
         System.out.printf("Ticket Price: ₱%.2f\n", newVisitor.getTicketPrice());
 
         System.out.print("Proceed with purchase? (yes/no) ");
         if (scanner.nextLine().equalsIgnoreCase("yes")) {
-            // Adds the visitor's ticket to the central Zoo system for validation
             zoo.addVisitorWithTicket(newVisitor);
             System.out.println("\nTicket purchased!");
             System.out.println("Your ticket code is: " + newVisitor.getTicketCode());
