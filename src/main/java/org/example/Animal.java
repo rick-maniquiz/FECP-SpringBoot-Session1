@@ -14,12 +14,12 @@ public abstract class Animal {
     }
 
     public void eat(){
-        System.out.println("The " + this.type + " is eating!");
-        this.makeSound();
+        System.out.println(this.name + " the " + this.type + " is eating!");
+//        this.makeSound();
     }
 
     protected void sleep(){
-        this.makeSound();
+//        this.makeSound();
         System.out.println("The " + this.type + " sleeps!");
 
     }

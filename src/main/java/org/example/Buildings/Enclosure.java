@@ -10,6 +10,7 @@ import java.util.Scanner;
 public abstract class Enclosure extends Building {
 
     public ArrayList<Animal> animals;
+    public String enclosureType = "Generic";
 
     public void setAnimals(ArrayList<Animal> animals){
         this.animals = animals;

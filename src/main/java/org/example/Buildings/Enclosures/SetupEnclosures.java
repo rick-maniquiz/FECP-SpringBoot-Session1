@@ -7,6 +7,7 @@ import org.example.Species.Felines.*;
 import org.example.Species.Pachyderms.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class SetupEnclosures {
@@ -96,31 +97,25 @@ public class SetupEnclosures {
     public Enclosure setupElephantEnclosure() {
         this.elephants.add(new Elephant("Dumbo", true));
         this.elephants.add(new Elephant("Tusko", true));
+        this.elephants.add(new Elephant("Tusko Jr.", true));
         this.elephantEnclosure.setAnimals(this.elephants);
         return this.elephantEnclosure;
     }
 
-    public List<Enclosure> setupAllEnclosure() {
-        this.setupOwlEnclosure();
-        this.setupParrotEnclosure();
-        this.setupFalconEnclosure();
-        this.setupLionEnclosure();
-        this.setupTigerEnclosure();
-        this.setupCheetahEnclosure();
-        this.setupRhinoEnclosure();
-        this.setupHippoEnclosure();
-        this.setupElephantEnclosure();
-        return List.of(
-                this.owlEnclosure,
-                this.parrotEnclosure,
-                this.falconEnclosure,
-                this.lionEnclosure,
-                this.tigerEnclosure,
-                this.cheetahEnclosure,
-                this.rhinoEnclosure,
-                this.hippoEnclosure,
-                this.elephantEnclosure
-        );
+    public HashMap<String, Enclosure> setupAllEnclosure() {
+        HashMap<String, Enclosure> enclosures = new HashMap<>();
+
+        enclosures.put("owl", this.setupOwlEnclosure());
+        enclosures.put("parrot", this.setupParrotEnclosure());
+        enclosures.put("falcon", this.setupFalconEnclosure());
+        enclosures.put("lion", this.setupLionEnclosure());
+        enclosures.put("tiger", this.setupTigerEnclosure());
+        enclosures.put("cheetah", this.setupCheetahEnclosure());
+        enclosures.put("rhino", this.setupRhinoEnclosure());
+        enclosures.put("hippo", this.setupHippoEnclosure());
+        enclosures.put("elephant", this.setupElephantEnclosure());
+
+        return enclosures;
     }
 
 }
