@@ -1,49 +1,77 @@
 package org.example.Buildings;
 
+import org.example.Building;
+import org.example.Buildings.Shops.Item;
+import org.example.People.Vendor;
+
 import java.util.ArrayList;
-import java.util.Lists;
+import java.util.List;
 import java.util.Scanner;
 
-import org.example.Buildings.Shops.Item;
+public abstract class Shop extends Building {
+    protected List<Item> itemList = new ArrayList<>();
+    protected List<Item> cart = new ArrayList<>();
+    protected Scanner scanner = new Scanner(System.in);
+    protected Vendor vendor;
 
-public abstract class Shop {
-
-    private List<Item> itemList = new ArrayList<>();
-    private List<Item> cart = new ArrayList<>();
-    public Scanner scanner = new Scanner(System.in);
-
-    public Shop(){
+    public Shop(Vendor vendor) {
+        super("Zoo Shop");
+        this.vendor = vendor;
         populateItems();
     }
 
     protected abstract void populateItems();
+    protected abstract String getShopName();
 
-    public void startShop(){
-        clearCart();
-        boolean continue = true;
+    public void startShopping() {
+        cart.clear();
+        System.out.println("Welcome to the " + getShopName() + "!");
 
-        while (continue){
-            showItems();
-            System.out.println("Enter item number to add to cart (0 to proceed to checkout):");
-            int menuChoice = scanner.nextInt();
+        boolean shopping = true;
+        while (shopping) {
+            System.out.println("\nAvailable Products:");
+            for (int i = 0; i < itemList.size(); i++) {
+                Item item = itemList.get(i);
+                System.out.printf("%d. %s - ₱%.2f%n", i + 1, item.getItem(), item.getPrice());
+            }
+            System.out.println("0. Proceed to Checkout");
+            System.out.print("Enter item number: ");
 
-            if (menuChoice==0){
+            while (!scanner.hasNextInt()) {
+                System.out.print("Invalid input. Enter a number: ");
+                scanner.next();
+            }
 
+            int choice = scanner.nextInt();
+
+            if (choice == 0) {
+                shopping = false;
+                checkout();
+            } else if (choice > 0 && choice <= itemList.size()) {
+                Item selected = itemList.get(choice - 1);
+                cart.add(selected);
+                System.out.println(selected.getItem() + " added to cart.");
+            } else {
+                System.out.println("Invalid choice.");
             }
         }
     }
 
-    public void clearCart(){
-        cart.clear();
-    }
-
-    private void showItems(){
-        System.out.println("---Available Items---");
-        for (int i=0; i<itemList.size(); i++) {
-            Item item = itemList.get(i);
-            System.out.println("-",i+1, item.getItem(), item.getPrice());
+    private void checkout() {
+        if (cart.isEmpty()) {
+            System.out.println("Cart is empty. No purchase made.");
+            return;
         }
+
+        double total = 0;
+        System.out.println("\nReceipt:");
+        for (Item item : cart) {
+            System.out.printf("- %s: ₱%.2f%n", item.getItem(), item.getPrice());
+            total += item.getPrice();
+            vendor.sell(item);
+        }
+
+        System.out.printf("Total paid: ₱%.2f%n", total);
+        System.out.println("Payment successful! Thank you for paying thru GCash!\n");
     }
-
-
 }

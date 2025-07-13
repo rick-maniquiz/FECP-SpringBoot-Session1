@@ -1,23 +1,23 @@
-package org.example.Buildings;
+package org.example;
 
 import org.example.Buildings.Shops.*;
 import org.example.People.Vendor;
 
 import java.util.Scanner;
 
-public class ShopModule {
+public class ShopModule{
     private Scanner scanner = new Scanner(System.in);
 
-    private Vendor foodVendor = new Vendor("Mr. Lebron", "Food");
-    private Vendor drinksVendor = new Vendor("Mr. Curry", "Drinks");
-    //private Vendor ticketVendor = new Vendor("Ms. Kaye", "Tickets");
-    private Vendor giftVendor = new Vendor("Ms. Red", "Gifts");
+    private Vendor foodVendor = new Vendor("Kuya Lebron", "Food");
+    private Vendor drinksVendor = new Vendor("Kuya Curry", "Drinks");
+    //private Vendor ticketVendor = new Vendor("Ate Kaye", "Tickets");
+    private Vendor giftVendor = new Vendor("Ate Red", "Gifts");
 
     public void start() {
         int choice;
 
         do {
-            System.out.println("\n=== Zoo Shop ===");
+            System.out.println("=== Zoo Shop ===");
             System.out.println("Where would you like to enter:");
             System.out.println("1. Food");
             System.out.println("2. Drinks");
