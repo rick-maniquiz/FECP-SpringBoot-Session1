@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Hospital extends Building {
-    public ArrayList<Animal> admittedAnimals;
+    public ArrayList<Animal> admittedAnimals = new ArrayList<>();
 
     public void admitAnimal(Animal animal){
         admittedAnimals.add(animal);

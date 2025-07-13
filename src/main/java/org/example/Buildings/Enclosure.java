@@ -9,8 +9,11 @@ import java.util.Scanner;
 
 public abstract class Enclosure extends Building {
 
-    public Scanner scanner = new Scanner(System.in);
+    public ArrayList<Animal> animals;
 
+    public void setAnimals(ArrayList<Animal> animals){
+        this.animals = animals;
+    }
     public void openEnclosure(){
 
     }

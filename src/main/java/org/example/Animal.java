@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.Species.Bird;
+
+import java.util.ArrayList;
+
 public abstract class Animal {
     protected String name, specie = "Animal Specie", type = "Animal Type";
     protected boolean isHealthy;
@@ -27,5 +31,7 @@ public abstract class Animal {
     protected void makeSound(){
 
     }
+
+
 
 }
