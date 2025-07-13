@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class HandlerModule {
 //    ArrayList<Building> buildings;
+
     ArrayList<Handler> handlers;
     Hospital hospital;
 //    ArrayList<Animal> animals;
@@ -17,10 +18,10 @@ public class HandlerModule {
     Scanner scanner = new Scanner(System.in);
     int response = -1;
 
-    HandlerModule(ArrayList<Handler> handlers, Hospital hospital){
+    HandlerModule(Zoo zoo){
 //        this.buildings = buildings;
-        this.handlers = handlers;
-        this.hospital = hospital;
+        this.handlers = zoo.getHandlers();
+        this.hospital = zoo.getHospital();
 //        this.animals = animals;
     }
 
