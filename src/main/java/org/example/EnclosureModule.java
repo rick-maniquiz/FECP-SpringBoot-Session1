@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class EnclosureModule {
     HashMap<String, Enclosure> enclosures;
 
-    EnclosureModule(HashMap<String, Enclosure> enclosures){
-        this.enclosures = enclosures;
+    EnclosureModule(Zoo zoo){
+        this.enclosures = zoo.enclosures;
     }
 
     public void run(){

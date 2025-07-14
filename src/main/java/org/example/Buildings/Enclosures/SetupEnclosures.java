@@ -42,6 +42,10 @@ public class SetupEnclosures {
         this.owls.add(new Owl("Hedwig", false));
         this.owls.add(new Owl("Nightwatch", true));
         this.owlEnclosure.setAnimals(this.owls);
+        for (Animal animal: this.owls){
+            animal.setLocation(owlEnclosure);
+            animal.setEnclosure(owlEnclosure);
+        }
         return this.owlEnclosure;
     }
 
@@ -49,6 +53,10 @@ public class SetupEnclosures {
         this.parrots.add(new Parrot("Polly", true));
         this.parrots.add(new Parrot("Captain", false));
         this.parrotEnclosure.setAnimals(this.parrots);
+        for (Animal animal: this.parrots){
+            animal.setLocation(parrotEnclosure);
+            animal.setEnclosure(parrotEnclosure);
+        }
         return this.parrotEnclosure;
     }
 
@@ -56,6 +64,10 @@ public class SetupEnclosures {
         this.falcons.add(new Falcon("Murica", true));
         this.falcons.add(new Falcon("Freedom", true));
         this.falconEnclosure.setAnimals(this.falcons);
+        for (Animal animal: this.falcons){
+            animal.setLocation(falconEnclosure);
+            animal.setEnclosure(falconEnclosure);
+        }
         return this.falconEnclosure;
     }
 
@@ -63,6 +75,10 @@ public class SetupEnclosures {
         this.lions.add(new Lion("Simba", true));
         this.lions.add(new Lion("Mufasa", true));
         this.lionEnclosure.setAnimals(this.lions);
+        for (Animal animal: this.lions){
+            animal.setLocation(lionEnclosure);
+            animal.setEnclosure(lionEnclosure);
+        }
         return this.lionEnclosure;
     }
 
@@ -70,6 +86,10 @@ public class SetupEnclosures {
         this.tigers.add(new Tiger("Shere Khan", false));
         this.tigers.add(new Tiger("Rajah", true));
         this.tigerEnclosure.setAnimals(this.tigers);
+        for (Animal animal: this.lions){
+            animal.setLocation(lionEnclosure);
+            animal.setEnclosure(lionEnclosure);
+        }
         return this.tigerEnclosure;
     }
 
@@ -77,6 +97,10 @@ public class SetupEnclosures {
         this.cheetahs.add(new Cheetah("Dash", true));
         this.cheetahs.add(new Cheetah("Flash", true));
         this.cheetahEnclosure.setAnimals(this.cheetahs);
+        for (Animal animal: this.cheetahs){
+            animal.setLocation(cheetahEnclosure);
+            animal.setEnclosure(cheetahEnclosure);
+        }
         return this.cheetahEnclosure;
     }
 
@@ -84,6 +108,10 @@ public class SetupEnclosures {
         this.rhinos.add(new Rhino("Ranger", true));
         this.rhinos.add(new Rhino("Hornbill", false));
         this.rhinoEnclosure.setAnimals(this.rhinos);
+        for (Animal animal: this.rhinos){
+            animal.setLocation(rhinoEnclosure);
+            animal.setEnclosure(rhinoEnclosure);
+        }
         return this.rhinoEnclosure;
     }
 
@@ -91,6 +119,10 @@ public class SetupEnclosures {
         this.hippos.add(new Hippo("Gloria", true));
         this.hippos.add(new Hippo("Muddy", false));
         this.hippoEnclosure.setAnimals(this.hippos);
+        for (Animal animal: this.hippos){
+            animal.setLocation(hippoEnclosure);
+            animal.setEnclosure(hippoEnclosure);
+        }
         return this.hippoEnclosure;
     }
 
@@ -99,6 +131,10 @@ public class SetupEnclosures {
         this.elephants.add(new Elephant("Tusko", true));
         this.elephants.add(new Elephant("Tusko Jr.", true));
         this.elephantEnclosure.setAnimals(this.elephants);
+        for (Animal animal: this.elephants){
+            animal.setLocation(elephantEnclosure);
+            animal.setEnclosure(elephantEnclosure);
+        }
         return this.elephantEnclosure;
     }
 

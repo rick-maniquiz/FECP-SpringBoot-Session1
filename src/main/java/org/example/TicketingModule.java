@@ -67,6 +67,8 @@ public class TicketingModule {
 
         if (zoo.isTicketCodeValid(code)) {
             System.out.println("Welcome to the Zoo! Enjoy your visit.");
+
+            new VisitorInterface(zoo).runInterface();
         } else {
             System.out.println("Invalid ticket code. Please purchase a ticket to enter.");
         }

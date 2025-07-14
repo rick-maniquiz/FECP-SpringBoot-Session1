@@ -73,6 +73,7 @@ public class HandlerModule {
                     }
                     case 3:{
                         this.hospital.admitAnimal(animalChoice);
+                        handlerLoggedIn.getEnclosure().animals.remove(animalChoice);
                         break;
                     }
                     default:{

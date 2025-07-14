@@ -15,6 +15,9 @@ public abstract class Enclosure extends Building {
     public void setAnimals(ArrayList<Animal> animals){
         this.animals = animals;
     }
+    public void addAnimal(Animal animal){
+        this.animals.add(animal);
+    }
     public void openEnclosure(){
 
     }

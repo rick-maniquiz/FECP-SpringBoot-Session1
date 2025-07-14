@@ -81,7 +81,9 @@ public class AdminModule {
             System.out.print("Enter your name, Manager: ");
             zoo.addPerson(new Manager(scanner.nextLine()));
             System.out.print("Enter Veterinarian's name: ");
-            zoo.addPerson(new Veterinarian(scanner.nextLine()));
+            Veterinarian veterinarian = new Veterinarian(scanner.nextLine());
+            zoo.setVeterinarian(veterinarian);
+            zoo.getHospital().setVeterinarian(veterinarian);
 
             System.out.print("Enter Handler for Owl Enclosure: ");
             zoo.addHandler(new Handler(scanner.nextLine(), zoo.enclosures.get("owl")));

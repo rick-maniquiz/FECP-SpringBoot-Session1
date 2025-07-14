@@ -16,6 +16,7 @@ public class Main {
 
         SetupEnclosures setupEnclosures = new SetupEnclosures();
         zoo.setEnclosures(setupEnclosures.setupAllEnclosure());
+        zoo.setHospital(new Hospital());
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Zoo Simulation!");

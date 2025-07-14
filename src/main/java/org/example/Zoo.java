@@ -3,40 +3,18 @@ package org.example;
 import org.example.Buildings.Enclosure;
 import org.example.Buildings.Hospital;
 import org.example.People.Handler;
+import org.example.People.Veterinarian;
 import org.example.People.Visitor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
-//public class Zoo {
-//
-//    public static void main(String[] args){
-//        ArrayList<Building> buildings = new ArrayList<>();
-//        ArrayList<Person> persons = new ArrayList<>();
-//        ArrayList<Handler> handlers = new ArrayList<>();
-//        ArrayList<Animal> animals = new ArrayList<>();
-//
-//        SetupEnclosures setupEnclosures = new SetupEnclosures();
-//        HashMap<String, Enclosure> enclosures = setupEnclosures.setupAllEnclosure();
-//
-//        Handler handler1 = new Handler("Stacy", enclosures.get("elephant"));
-//        Handler handler2 = new Handler("Betty", enclosures.get("rhino"));
-//        handlers.add(handler1);
-//        handlers.add(handler2);
-//        Hospital hospital = new Hospital();
-//        HandlerModule handlerModule = new HandlerModule(handlers, hospital);
-////        handlerModule.run();
-//
-//        EnclosureModule enclosureModule = new EnclosureModule(enclosures);
-//        enclosureModule.run();
-
-//import TicketingModule
 
 public class Zoo {
     private final ArrayList<Visitor> visitorsWithTickets = new ArrayList<>();
     ArrayList<Handler> handlers = new ArrayList<>();
     HashMap<String, Enclosure> enclosures;
     Hospital hospital;
+    Veterinarian veterinarian;
     ArrayList<Building> buildings;
     private final ArrayList<Person> people = new ArrayList<>();
     ArrayList<Animal> animals;
@@ -44,6 +22,10 @@ public class Zoo {
 
     public void setHospital(Hospital hospital){
         this.hospital = hospital;
+    }
+
+    public void setVeterinarian(Veterinarian veterinarian){
+        this.veterinarian = veterinarian;
     }
 
     public Hospital getHospital(){
