@@ -23,18 +23,16 @@ public class TicketingModule {
         System.out.println("Here's what you can experience in the zoo:");
         System.out.println("Visit Animal Enclosures (Elephant, Lion, Owl)");
         System.out.println("Buy snacks and drinks from our Shops");
-        System.out.println("Listen to science lectures at the Hospital");
         System.out.println("Buy fun gifts at our Gift Shop");
 
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         System.out.print("Enter your age: ");
 
-        String ageInput = scanner.nextLine();
-        int age;
+        int age = scanner.nextInt();
 
-        if (ageInput.matches("\\d+")) {
-            age = Integer.parseInt(ageInput);
+        if (age >= 0) {
+            scanner.nextLine();
         } else {
             System.out.println("Invalid age. Please enter a number.");
             return;
