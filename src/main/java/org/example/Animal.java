@@ -1,12 +1,18 @@
 package org.example;
 
+import org.example.Buildings.Enclosure;
+
 public abstract class Animal {
     protected String name, specie = "Animal Specie", type = "Animal Type";
+    protected Building location;
+    protected Enclosure enclosure;
     protected boolean isHealthy;
 
-    protected Animal(String name, boolean isHealthy){
+    protected Animal(String name, boolean isHealthy, Building location, Enclosure enclosure){
         this.name = name;
         this.isHealthy = isHealthy;
+        this.location = location;
+        this.enclosure = enclosure;
     }
 
     public void eat(){

@@ -11,7 +11,7 @@ public class Hospital extends Building {
 
 
     public Hospital() {
-        super("Zoo Animal Hospital");
+        super("Zoo Hospital");
     }
 
     public void admitAnimal(Animal animal) {
@@ -23,3 +23,4 @@ public class Hospital extends Building {
         return "Hospital at: " + address;
     }
 }
+
