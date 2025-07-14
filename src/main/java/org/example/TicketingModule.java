@@ -37,10 +37,6 @@ public class TicketingModule {
             System.out.println("Invalid age. Please enter a number.");
             return;
         }
-        if (age < 0) {
-            System.out.println("Age cannot be negative. Please enter a valid age.");
-            return;
-        }
 
         Visitor newVisitor = new Visitor(name, age);
         System.out.println("\nYou qualify for a " + newVisitor.getTicketType().toUpperCase() + " ticket.");
