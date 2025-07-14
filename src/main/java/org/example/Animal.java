@@ -28,4 +28,13 @@ public abstract class Animal {
 
     }
 
+    //added for veterinarian module
+    public String getName() {
+        return name;
+    }
+
+    public boolean isHealthy() {
+        return isHealthy;
+    }
+
 }
