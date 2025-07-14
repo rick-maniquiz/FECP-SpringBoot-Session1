@@ -51,7 +51,7 @@ public abstract class Animal {
     }
 
     public void setLocation(Building building){
-        this.location = location;
+        this.location = building;
     }
 
     public void setEnclosure(Enclosure enclosure){

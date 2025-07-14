@@ -86,9 +86,9 @@ public class SetupEnclosures {
         this.tigers.add(new Tiger("Shere Khan", false));
         this.tigers.add(new Tiger("Rajah", true));
         this.tigerEnclosure.setAnimals(this.tigers);
-        for (Animal animal: this.lions){
-            animal.setLocation(lionEnclosure);
-            animal.setEnclosure(lionEnclosure);
+        for (Animal animal: this.tigers){
+            animal.setLocation(tigerEnclosure);
+            animal.setEnclosure(tigerEnclosure);
         }
         return this.tigerEnclosure;
     }
