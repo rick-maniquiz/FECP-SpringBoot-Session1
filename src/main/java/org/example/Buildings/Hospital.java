@@ -70,9 +70,11 @@ public class Hospital extends Building {
             System.out.println(veterinarian.getName() + " is healing the animals...");
             for (Animal animal : sickAnimals) {
                 veterinarian.heal(animal);
-                healedAnimals.put(animal, LocalDateTime.now());
+                LocalDateTime dateTime = LocalDateTime.now();
+                healedAnimals.put(animal, dateTime);
                 animal.setLocation(animal.getEnclosure());
                 animal.getEnclosure().animals.add(animal);
+                System.out.println(animal.getName() + " the " + animal.getType() + " has been healed at " + dateTime.toString());
             }
             sickAnimals.clear();
         }

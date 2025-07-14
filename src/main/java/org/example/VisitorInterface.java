@@ -15,7 +15,7 @@ public class VisitorInterface {
             System.out.println("\n=== Welcome to the Zoo Simulation ===");
             System.out.println("1. Enter Hospital Monitor");
             System.out.println("2. Enter Zoo Shop");
-            System.out.println("3. View All Animals");
+            System.out.println("3. Visit an Enclosure");
             System.out.println("4. Exit");
             System.out.print("Enter choice: ");
             while (!scanner.hasNextInt()) {
@@ -27,7 +27,7 @@ public class VisitorInterface {
 
             switch (choice) {
                 case 1 -> new HospitalModule(zoo).run();
-//                case 2 -> new ShopModule();
+                case 2 -> new ShopModule(zoo).run();
                 case 3 -> new EnclosureModule(zoo).run();
                 case 4 -> System.out.println("Exiting zoo simulation...");
                 default -> System.out.println("Invalid choice.");

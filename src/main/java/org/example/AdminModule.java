@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.Buildings.Shop;
+import org.example.Buildings.Shops.Drinks;
+import org.example.Buildings.Shops.Food;
+import org.example.Buildings.Shops.Gifts;
 import org.example.People.Manager;
 import org.example.People.Veterinarian;
 import org.example.People.Handler;
@@ -103,11 +107,24 @@ public class AdminModule {
             zoo.addHandler(new Handler(scanner.nextLine(), zoo.enclosures.get("hippo")));
             System.out.print("Enter Handler for Elephant Enclosure: ");
             zoo.addHandler(new Handler(scanner.nextLine(), zoo.enclosures.get("elephant")));
-            System.out.print("Enter Vendor for Ticket Shop: ");
-            zoo.addPerson(new Vendor(scanner.nextLine(), new Building("Ticket Shop")));
-            System.out.print("Enter Vendor for Shop: ");
-            zoo.addPerson(new Vendor(scanner.nextLine(), new Building("Gift Shop")));
-            System.out.println("\nZoo staff setup complete.");
+
+            System.out.print("Enter Vendor for Drink Shop: ");
+            Vendor drinkShopVendor = new Vendor(scanner.nextLine(), "Drinks");
+            Drinks drinkShop = new Drinks(drinkShopVendor);
+            zoo.addVendor(drinkShopVendor);
+            zoo.setDrinkShop(drinkShop);
+
+            System.out.print("Enter Vendor for Food Shop: ");
+            Vendor foodShopVendor = new Vendor(scanner.nextLine(), "Food");
+            Food foodShop = new Food(foodShopVendor);
+            zoo.addVendor(foodShopVendor);
+            zoo.setFoodShop(foodShop);
+
+            System.out.print("Enter Vendor for Gift Shop: ");
+            Vendor giftsShopVendor = new Vendor(scanner.nextLine(), "Gifts");
+            Gifts giftsShop = new Gifts(giftsShopVendor);
+            zoo.addVendor(giftsShopVendor);
+            zoo.setGiftshop(giftsShop);
 
         }
     }

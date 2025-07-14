@@ -12,11 +12,14 @@ public abstract class Animal {
     protected Enclosure enclosure;
     protected boolean isHealthy;
 
-    protected Animal(String name, boolean isHealthy, Building location, Enclosure enclosure){
+    protected Animal(String name, boolean isHealthy){
         this.name = name;
         this.isHealthy = isHealthy;
-        this.location = location;
-        this.enclosure = enclosure;
+
+    }
+
+    public String getType(){
+        return this.type;
     }
 
     public void eat(){

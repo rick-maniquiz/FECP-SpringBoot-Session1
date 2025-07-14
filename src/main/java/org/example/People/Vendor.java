@@ -15,7 +15,7 @@ public class Vendor extends Person {
 
     public void sell(Item item) {
         revenue += item.getPrice();
-        System.out.println(name + " (Vendor of " + vendorType + ") sold: " + item.getItem());
+        System.out.println(name + " (Vendor " + vendorType + ") sold: " + item.getItem());
     }
 
     public double getRevenue() {

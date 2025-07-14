@@ -64,6 +64,21 @@ public abstract class Shop extends Building {
         }
 
         double total = 0;
+        System.out.println("\nYour cart");
+        for (Item item : cart) {
+            System.out.printf("- %s: ₱%.2f%n", item.getItem(), item.getPrice());
+            total += item.getPrice();
+            vendor.sell(item);
+        }
+
+        System.out.printf("Total paid: ₱%.2f%n", total);
+
+        System.out.println("Would you like to checkout (yes/no)? ");
+        if (scanner.next().toLowerCase().equals("no")){
+            System.out.println("Thank you for stopping by!");
+            return;
+        }
+
         System.out.println("\nReceipt:");
         for (Item item : cart) {
             System.out.printf("- %s: ₱%.2f%n", item.getItem(), item.getPrice());

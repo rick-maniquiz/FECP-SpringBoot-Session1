@@ -68,7 +68,12 @@ public class HandlerModule {
                         break;
                     }
                     case 2:{
-                        animalChoice.roam();
+                        if (animalChoice.isHealthy){
+                            animalChoice.roam();
+                        } else {
+                            System.out.println(animalChoice.getName() + " the " + animalChoice.getType() + " is not feeling well.");
+                        }
+
                         break;
                     }
                     case 3:{
@@ -82,7 +87,7 @@ public class HandlerModule {
                     }
                 }
             }
-            System.out.print("Choose animal: ");
+            System.out.print("Choose animal (0 to exit): ");
             this.response = scanner.nextInt();
 
 
