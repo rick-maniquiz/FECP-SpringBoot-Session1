@@ -73,7 +73,7 @@ public abstract class Shop extends Building {
 
         System.out.printf("Total paid: ₱%.2f%n", total);
 
-        System.out.println("Would you like to checkout (yes/no)? ");
+        System.out.print("Would you like to checkout (yes/no)? ");
         if (scanner.next().toLowerCase().equals("no")){
             System.out.println("Thank you for stopping by!");
             return;

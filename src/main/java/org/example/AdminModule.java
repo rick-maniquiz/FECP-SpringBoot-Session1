@@ -126,6 +126,8 @@ public class AdminModule {
             zoo.addVendor(giftsShopVendor);
             zoo.setGiftshop(giftsShop);
 
+            System.out.println("The zoo team is ready!");
+
         }
     }
 
