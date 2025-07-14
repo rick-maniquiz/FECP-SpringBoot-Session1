@@ -1,17 +1,58 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import org.example.Buildings.Enclosure;
+import org.example.Buildings.Enclosures.SetupEnclosures;
+import org.example.Buildings.Hospital;
+import org.example.People.Handler;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Zoo zoo = new Zoo();
+
+        SetupEnclosures setupEnclosures = new SetupEnclosures();
+        zoo.setEnclosures(setupEnclosures.setupAllEnclosure());
+        zoo.setHospital(new Hospital());
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to the Zoo Simulation!");
+
+        boolean exit = false;
+        while (!exit) {
+            System.out.println("\n--- Main Menu ---");
+            System.out.println("1. Administrator Console");
+//            System.out.println("2. Handler Console");
+            System.out.println("2. Buy Tickets (Visitor)");
+            System.out.println("3. Exit Simulation");
+            System.out.print("Choose an option: ");
+
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:{
+                    new AdminModule(zoo).run();
+                    break;
+                }
+
+                case 2:{
+                    new TicketingModule(zoo).run();
+                    break;
+                }
+
+                case 3:{
+                    exit = true;
+                    System.out.println("Thank you for using the Zoo Simulation!");
+                    break;
+                }
+
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+
         }
+
     }
 }
