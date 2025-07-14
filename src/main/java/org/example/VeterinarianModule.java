@@ -48,8 +48,8 @@ public class VeterinarianModule {
             System.out.println("Hooray, there are no sick animals admitted!");
         } else {
             System.out.println(vet.getName() + " is healing the animals...");
-            vet.heal();
             for (Animal animal : sickAnimals) {
+                vet.heal(animal);
                 healedAnimals.put(animal, LocalDateTime.now());
             }
             sickAnimals.clear();
@@ -69,12 +69,12 @@ public class VeterinarianModule {
 //        return healedAnimals;
 //    }
 
-    public void executeHospital() {
+    public void run() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("\n--- Zoo Visitor Hospital Monitor ---");
+            System.out.println("\n=== Zoo Visitor Hospital Monitor ===");
             System.out.println("1. View Sick Animals");
             System.out.println("2. View Healed Animals");
             System.out.println("3. Attend Science Lecture");

@@ -43,4 +43,16 @@ public abstract class Animal {
         return isHealthy;
     }
 
+    public void setLocation(Building building){
+        this.location = location;
+    }
+
+    public Enclosure getEnclosure(){
+        return this.enclosure;
+    }
+
+    public void setHealth(boolean bool){
+        this.isHealthy = bool;
+    }
+
 }
