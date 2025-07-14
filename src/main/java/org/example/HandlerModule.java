@@ -77,7 +77,6 @@ public class HandlerModule {
                         break;
                     }
                     case 3:{
-                        animalChoice.setEnclosure(handlerLoggedIn.getEnclosure());
                         this.hospital.admitAnimal(animalChoice);
                         handlerLoggedIn.getEnclosure().animals.remove(animalChoice);
                         break;
