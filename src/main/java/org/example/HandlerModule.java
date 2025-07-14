@@ -87,7 +87,13 @@ public class HandlerModule {
                     }
                 }
             }
-            System.out.print("Choose animal (0 to exit): ");
+            System.out.println("Welcome, Handler "+ handlerName + "!");
+            System.out.println("--- Animal Duty Menu ---");
+            System.out.println("Animals assigned to you:");
+            for (int i = 0; i < handlerLoggedIn.getEnclosure().animals.size(); i++){
+                System.out.println((i + 1) + ". " + handlerLoggedIn.getEnclosure().animals.get(i).name);
+            }
+            System.out.print("Choose animal to interact with (0 to exit): ");
             this.response = scanner.nextInt();
 
 

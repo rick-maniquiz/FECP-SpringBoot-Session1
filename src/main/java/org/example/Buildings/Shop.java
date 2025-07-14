@@ -82,7 +82,7 @@ public abstract class Shop extends Building {
         System.out.println("\nReceipt:");
         for (Item item : cart) {
             System.out.printf("- %s: ₱%.2f%n", item.getItem(), item.getPrice());
-            total += item.getPrice();
+//            total += item.getPrice();
             vendor.sell(item);
         }
 

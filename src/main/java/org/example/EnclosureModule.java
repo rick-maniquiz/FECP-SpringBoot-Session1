@@ -77,7 +77,7 @@ public class EnclosureModule {
         }
 
         if (willFeedThem.equals("yes")){
-            System.out.print("Choose a " + animalEnclosureToVisit.toLowerCase() + " to feed:");
+            System.out.print("Choose one " + animalEnclosureToVisit.toLowerCase() + " to feed (enter an integer):");
             option = scanner.nextInt();
             while (option < 1 || option > enclosures.get(animalEnclosureToVisit.toLowerCase()).animals.size()){
                 System.out.print("Choose a valid animal: ");
@@ -120,7 +120,7 @@ public class EnclosureModule {
         }
 
         if (willFeedThem.equalsIgnoreCase("yes")) {
-            System.out.print("Choose a " + key + " to feed: ");
+            System.out.print("Choose one " + key + " to feed (enter an integer): ");
             option = scanner.nextInt();
             while (option < 1 || option > enclosures.get(key).animals.size()) {
                 System.out.print("Choose a valid animal: ");
@@ -163,7 +163,7 @@ public class EnclosureModule {
         }
 
         if (willFeedThem.equalsIgnoreCase("yes")) {
-            System.out.print("Choose a " + key + " to feed: ");
+            System.out.print("Choose one " + key + " to feed (enter integer): ");
             option = scanner.nextInt();
             while (option < 1 || option > enclosures.get(key).animals.size()) {
                 System.out.print("Choose a valid animal: ");
